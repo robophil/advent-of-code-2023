@@ -1,1 +1,3 @@
 /target
+src/inputs/*
+!src/inputs/.gitkeep
