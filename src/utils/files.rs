@@ -6,9 +6,9 @@ pub fn get_input_file_path(day: &str, part: &str) -> String {
 }
 
 pub fn file_to_string_vec(path: &str) -> Result<Vec<String>, std::io::Error> {
-    let file = File::open(path)?;
-    let reader = BufReader::new(file);
-    let mut lines = Vec::new();
+    let file: File = File::open(path)?;
+    let reader: BufReader<File> = BufReader::new(file);
+    let mut lines: Vec<String> = Vec::new();
     for line in reader.lines() {
         lines.push(line?);
     }

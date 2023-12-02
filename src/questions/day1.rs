@@ -10,14 +10,14 @@ struct Count {
 }
 impl Question {
     fn solve(&self, input: &Vec<String>) -> SolutionResult {
-        let result = input.iter().fold(
+        let result: Count = input.iter().fold(
             Count {
                 last_value: 0,
                 count: 0,
                 first_run: true,
             },
-            |acc, f| {
-                let num = f.parse::<i32>().unwrap();
+            |acc: Count, f: &String| {
+                let num: i32 = f.parse::<i32>().unwrap();
                 if acc.first_run {
                     Count {
                         last_value: num,
