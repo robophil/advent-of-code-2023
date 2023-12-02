@@ -14,8 +14,6 @@ use crate::{
     solutions::Solution,
 };
 
-// use solutions::Solution;
-
 fn main() -> Result<(), Box<dyn Error>> {
     println!("Welcome to AOC 2023");
     let solutions: Vec<Box<dyn Solution>> =
@@ -43,8 +41,10 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     if part == "1" {
         println!("Solution: {}", solution.solve_input_1(&input)?);
-    } else {
+    } else if part == "2" {
         println!("Solution: {}", solution.solve_input_2(&input)?);
+    } else {
+        Err("Invalid part number")?;
     }
 
     println!("Elapsed_ms: {}", start_time.elapsed()?.as_millis());
