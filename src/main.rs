@@ -17,7 +17,7 @@ use crate::{
 // use solutions::Solution;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    println!("Welcome to AOC 2021");
+    println!("Welcome to AOC 2023");
     let solutions: Vec<Box<dyn Solution>> =
         vec![Box::new(day1::Question), Box::new(day2::Question)];
     let mut day = String::new();
@@ -34,7 +34,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let day = day.trim();
     let part = part.trim();
 
-    println!("AOC:2021 Solving Day {}, part {} ....", day, part);
+    println!("AOC:2023 Solving Day {}, part {} ....", day, part);
 
     let path_to_file = get_input_file_path(day, part);
     let input = file_to_string_vec(&path_to_file)?;
